@@ -57,10 +57,7 @@ fun ArticlePage(id: String, viewModel: ArticlesViewModel) {
             Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.article_horizontal_margin)))
 
             AsyncImage(
-                model = ImageRequest.Builder(LocalContext.current)
-                    .data(model?.authorDetails?.imageUrlString)
-                    .crossfade(true)
-                    .build(),
+                model = model?.authorDetails?.imageUrlString,
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
